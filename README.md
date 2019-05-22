@@ -6,11 +6,20 @@ A simple AWS lambda function written in golang to notify a slack incoming webhoo
 
 ## Usage
 
-e.g.
+Required environment variables:
+
+```bash
+WEBHOOK_URL=https://hooks.slack.com/services/AAAAAAAAA/BBBBBBBBB/CCCCCCCCCCCCCCCCCCCCCCC
+REGION=eu-west-1
+```
+
+Build to run in Lambda (Amazon Linux)
 
 ```
-e.g.
+GOARCH=amd64 GOOS=linux go build
 ```
+
+Zip the binary created from the build process and upload to lambda //TO-DO: Add automated lambda infrastructure build / deploy to this repo
 
 ## Related Projects
 
